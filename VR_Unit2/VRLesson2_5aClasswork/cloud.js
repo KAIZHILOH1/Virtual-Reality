@@ -15,3 +15,7 @@ class Cloud{
   }
   //Challenge 2: Create a function fly() which increases x by dx and updates the Cloud object to that x position
 }
+ spin(){
+    this.a += this.da;
+    this.obj.setAttribute("rotation",{x:0, y:this.a, z:0});
+  }
