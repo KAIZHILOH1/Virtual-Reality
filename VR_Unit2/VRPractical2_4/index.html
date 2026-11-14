@@ -1,16 +1,110 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
-    <script src="script.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VR Practical 2.4 - Neighborhood, Rockets, and UFOs</title>
+    <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
   </head>
   <body>
-      <a-scene>
-        <!-- Challenge 1: Add a propriate plane and sky for the missile launch site -->
-    
-        
-      
-      <!-- Camera is added so that you do not "spawn" at the origin -->
-      <a-camera position="0 1.3 4"></a-camera>
+    <a-scene>
+      <!-- Sky and Ground -->
+      <a-sky color="#87CEEB"></a-sky>
+      <a-plane position="0 0 0" rotation="-90 0 0" width="120" height="120" color="#5da142"></a-plane>
+
+      <!-- Main Road (East-West) -->
+      <a-box position="0 0 0" width="120" height="0.1" depth="12" color="#333333"></a-box>
+      <a-box position="-30 0.1 0" width="8" height="0.05" depth="0.5" color="#ffd700"></a-box>
+      <a-box position="-10 0.1 0" width="8" height="0.05" depth="0.5" color="#ffd700"></a-box>
+      <a-box position="10 0.1 0" width="8" height="0.05" depth="0.5" color="#ffd700"></a-box>
+      <a-box position="30 0.1 0" width="8" height="0.05" depth="0.5" color="#ffd700"></a-box>
+
+      <!-- Sidewalks -->
+      <a-box position="0 0.1 -8" width="120" height="0.2" depth="4" color="#cccccc"></a-box>
+      <a-box position="0 0.1 8" width="120" height="0.2" depth="4" color="#cccccc"></a-box>
+
+      <!-- Kai's Car on the Road -->
+      <a-entity class="car" position="-12 0.5 6" scale="0.7 0.7 0.7">
+        <a-box position="-1 0.5 -3" color="darkblue" width="10" depth="4" height="2"></a-box>
+        <a-box position="-1 1 -3" color="darkblue" width="5" depth="4" height="3"></a-box>
+        <a-torus position="1.8 0 -1" color="black" radius="0.5"></a-torus>
+        <a-torus position="-3.6 0 -1" color="black" radius="0.5"></a-torus>
+        <a-torus position="-3.6 0 -5" color="black" radius="0.5"></a-torus>
+        <a-torus position="1.8 0 -5" color="black" radius="0.5"></a-torus>
+        <a-cylinder radius="0.1" height="0.75" position="3.2 1.85 -1.15" color="black"></a-cylinder>
+        <a-cylinder radius="0.1" height="0.75" position="3.2 1.85 -4.85" color="black"></a-cylinder>
+        <a-box color="black" height="0.25" width="6" position="3.3 2.1 -3" rotation="0 90 0"></a-box>
+        <a-sphere position="-6 1 -1.5" radius="0.25" color="black"></a-sphere>
+        <a-sphere position="4 1 -1.5" radius="0.25" color="black"></a-sphere>
+        <a-sphere position="-6 1 -4.5" radius="0.25" color="black"></a-sphere>
+        <a-sphere position="4 1 -4.5" radius="0.25" color="black"></a-sphere>
+        <a-box position="-1 1.8 -0.84" color="white" depth="0.2" height="0.89" width="4"></a-box>
+        <a-box position="-1 1.8 -5" color="white" depth="0.2" height="0.89" width="4"></a-box>
+        <a-box position="-6.1 0.6 -3" src="Screenshot 2026-10-07 110208.png" height="2" width="3.8" depth="0.1" rotation="0 90 0"></a-box>
+      </a-entity>
+
+      <!-- House 1: Modern Yellow Two-Story House -->
+      <a-entity position="-18 0 -22">
+        <a-box position="6 0.05 9" width="5" height="0.1" depth="8" color="#888888"></a-box>
+        <a-box position="0 4 0" width="12" height="8" depth="10" color="#f4d03f"></a-box>
+        <a-cone position="0 10 0" rotation="0 45 0" radius-bottom="10" radius-top="0" height="4" segments-radial="4" color="#5d4037"></a-cone>
+        <a-box position="0 2 5" width="2" height="4" depth="0.2" color="#795548"></a-box>
+        <a-box position="-3 2 5" width="2" height="2" depth="0.2" color="#aed6f1"></a-box>
+        <a-box position="3 2 5" width="2" height="2" depth="0.2" color="#aed6f1"></a-box>
+        <a-box position="-3 6 5" width="2" height="2" depth="0.2" color="#aed6f1"></a-box>
+        <a-box position="3 6 5" width="2" height="2" depth="0.2" color="#aed6f1"></a-box>
+      </a-entity>
+
+      <!-- House 2: Cozy Brick Cottage -->
+      <a-entity position="6 0 -22">
+        <a-box position="8 0.05 9" width="5" height="0.1" depth="8" color="#888888"></a-box>
+        <a-box position="0 3 0" width="10" height="6" depth="10" color="#b03a2e"></a-box>
+        <a-cone position="0 8 0" rotation="0 45 0" radius-bottom="8" radius-top="0" height="4" segments-radial="4" color="#2c3e50"></a-cone>
+        <a-box position="3 8 -2" width="1" height="4" depth="1" color="#7b241c"></a-box>
+        <a-box position="-2 2 5" width="2" height="4" depth="0.2" color="#ffffff"></a-box>
+        <a-box position="2 3 5" width="3" height="2" depth="0.2" color="#aed6f1"></a-box>
+      </a-entity>
+
+      <!-- House 3: Blue Suburban House -->
+      <a-entity position="-12 0 22" rotation="0 180 0">
+        <a-box position="0 3 0" width="14" height="6" depth="10" color="#5499c7"></a-box>
+        <a-cone position="0 8 0" rotation="0 45 0" radius-bottom="11" radius-top="0" height="4" segments-radial="4" color="#34495e"></a-cone>
+        <a-box position="0 2 5" width="2" height="4" depth="0.2" color="#f8f9f9"></a-box>
+        <a-box position="-4 3 5" width="2" height="2" depth="0.2" color="#aed6f1"></a-box>
+        <a-box position="4 3 5" width="2" height="2" depth="0.2" color="#aed6f1"></a-box>
+      </a-entity>
+
+      <!-- Community Park -->
+      <a-entity position="16 0 22">
+        <a-box position="0 0.1 0" width="14" height="0.2" depth="12" color="#f5cba7"></a-box>
+        <a-cylinder position="-4 2 0" radius="0.2" height="4" color="#e74c3c"></a-cylinder>
+        <a-cylinder position="0 2 0" radius="0.2" height="4" color="#e74c3c"></a-cylinder>
+        <a-box position="-2 4 0" width="5" height="0.3" depth="0.3" color="#e74c3c"></a-box>
+        <a-box position="-3 1 0" width="1" height="0.2" depth="1" color="#2c3e50"></a-box>
+        <a-box position="-1 1 0" width="1" height="0.2" depth="1" color="#2c3e50"></a-box>
+        <a-box position="4 1 2" width="3" height="0.2" depth="2" color="#8d6e63"></a-box>
+        <a-box position="4 0.5 2" width="2" height="1" depth="1" color="#5d4037"></a-box>
+      </a-entity>
+
+      <!-- Trees & Streetlights -->
+      <a-entity position="-6 0 -13">
+        <a-cylinder position="0 2 0" radius="0.5" height="4" color="#6d4c41"></a-cylinder>
+        <a-sphere position="0 5 0" radius="2.5" color="#27ae60"></a-sphere>
+      </a-entity>
+      <a-entity position="22 0 -13">
+        <a-cylinder position="0 2 0" radius="0.5" height="4" color="#6d4c41"></a-cylinder>
+        <a-cone position="0 6 0" radius-bottom="3" radius-top="0" height="5" color="#1e8449"></a-cone>
+      </a-entity>
+      <a-entity position="-15 0 -7">
+        <a-cylinder position="0 3 0" radius="0.2" height="6" color="#2c3e50"></a-cylinder>
+        <a-sphere position="0 6 0" radius="0.5" color="#fff9c4"></a-sphere>
+      </a-entity>
+
+      <!-- Camera -->
+      <a-camera position="0 6 16" rotation="-15 0 0"></a-camera>
     </a-scene>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
   </body>
 </html>

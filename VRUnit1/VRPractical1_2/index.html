@@ -1,509 +1,153 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A-Frame Neighborhood Scene</title>
+    <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
   </head>
   <body>
     <a-scene>
-        <a-assets>
-            <img id="door" src="door.png"/>
-        </a-assets>
+      <!-- Sky and Ground -->
+      <a-sky color="#87CEEB"></a-sky>
+      <a-plane position="0 0 0" rotation="-90 0 0" width="120" height="120" color="#5da142"></a-plane>
 
-        <a-entity class="building" position="6 0 0">
-      <a-entity class="room">
-            <a-entity class="wall">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" rotation="0 90 0" position="3 0 -3">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" position="0 0 -6">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-      </a-entity>
-      <a-entity class="room" position="0 3 0">
-            <a-entity class="wall">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" rotation="0 90 0" position="3 0 -3">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" position="0 0 -6">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-      </a-entity>
-      <a-entity class="room" position="0 6 0">
-            <a-entity class="wall">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" rotation="0 90 0" position="3 0 -3">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" position="0 0 -6">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-      </a-entity>
-    <a-entity class="room" position="0 9 0">
-            <a-entity class="wall">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" rotation="0 90 0" position="3 0 -3">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" position="0 0 -6">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-    </a-entity>
-    <a-entity class="room" position="0 12 0">
-            <a-entity class="wall">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" rotation="0 90 0" position="3 0 -3">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" position="0 0 -6">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-    </a-entity>
-  </a-entity>
+      <!-- Main Road (East-West) -->
+      <a-box position="0 0 0" width="120" height="0.1" depth="12" color="#333333"></a-box>
+      <!-- Road Center Lines -->
+      <a-box position="-30 0.1 0" width="8" height="0.05" depth="0.5" color="#ffd700"></a-box>
+      <a-box position="-10 0.1 0" width="8" height="0.05" depth="0.5" color="#ffd700"></a-box>
+      <a-box position="10 0.1 0" width="8" height="0.05" depth="0.5" color="#ffd700"></a-box>
+      <a-box position="30 0.1 0" width="8" height="0.05" depth="0.5" color="#ffd700"></a-box>
 
-  <a-entity class="building" position="15 0 0">
-      <a-entity class="room">
-            <a-entity class="wall">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" rotation="0 90 0" position="3 0 -3">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" position="0 0 -6">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-      </a-entity>
-      <a-entity class="room" position="0 3 0">
-            <a-entity class="wall">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" rotation="0 90 0" position="3 0 -3">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" position="0 0 -6">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-      </a-entity>
-      <a-entity class="room" position="0 6 0">
-            <a-entity class="wall">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" rotation="0 90 0" position="3 0 -3">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" position="0 0 -6">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-      </a-entity>
-    <a-entity class="room" position="0 9 0">
-            <a-entity class="wall">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" rotation="0 90 0" position="3 0 -3">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" position="0 0 -6">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-    </a-entity>
-    <a-entity class="room" position="0 12 0">
-            <a-entity class="wall">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" rotation="0 90 0" position="3 0 -3">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" position="0 0 -6">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-    </a-entity>
-  </a-entity>
+      <!-- Sidewalks -->
+      <a-box position="0 0.1 -8" width="120" height="0.2" depth="4" color="#cccccc"></a-box>
+      <a-box position="0 0.1 8" width="120" height="0.2" depth="4" color="#cccccc"></a-box>
 
-  <a-entity class="building" position="-3 0 0">
-      <a-entity class="room">
-            <a-entity class="wall">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" rotation="0 90 0" position="3 0 -3">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" position="0 0 -6">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
+      <!-- Your Original Car (Kai's Car) on the Road -->
+      <a-entity class="car" position="-12 0.5 6" scale="0.7 0.7 0.7">
+        <a-box position="-1 0.5 -3" color="darkblue" width="10" depth="4" height="2"></a-box>
+        <a-box position="-1 1 -3" color="darkblue" width="5" depth="4" height="3"></a-box>
+        <a-torus position="1.8 0 -1" color="black" radius="0.5"></a-torus>
+        <a-torus position="-3.6 0 -1" color="black" radius="0.5"></a-torus>
+        <a-torus position="-3.6 0 -5" color="black" radius="0.5"></a-torus>
+        <a-torus position="1.8 0 -5" color="black" radius="0.5"></a-torus>
+        <a-cylinder radius="0.1" height="0.75" position="3.2 1.85 -1.15" color="black"></a-cylinder>
+        <a-cylinder radius="0.1" height="0.75" position="3.2 1.85 -4.85" color="black"></a-cylinder>
+        <a-box color="black" height="0.25" width="6" position="3.3 2.1 -3" rotation="0 90 0"></a-box>
+        <a-sphere position="-6 1 -1.5" radius="0.25" color="black"></a-sphere>
+        <a-sphere position="4 1 -1.5" radius="0.25" color="black"></a-sphere>
+        <a-sphere position="-6 1 -4.5" radius="0.25" color="black"></a-sphere>
+        <a-sphere position="4 1 -4.5" radius="0.25" color="black"></a-sphere>
+        <a-box position="-1 1.8 -0.84" color="white" depth="0.2" height="0.89" width="4"></a-box>
+        <a-box position="-1 1.8 -5" color="white" depth="0.2" height="0.89" width="4"></a-box>
+        <a-box position="-6.1 0.6 -3" src="Screenshot 2026-10-07 110208.png" height="2" width="3.8" depth="0.1" rotation="0 90 0"></a-box>
       </a-entity>
-      <a-entity class="room" position="0 3 0">
-            <a-entity class="wall">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" rotation="0 90 0" position="3 0 -3">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" position="0 0 -6">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
+
+      <!-- Truck from Attached Scene (Parked in Driveway) -->
+      <a-entity class="truck" position="14 0 -14" rotation="0 0 0">
+        <a-box position="0 0.6 0" width="2" height="0.4" depth="4" color="#c0392b"></a-box>
+        <a-box position="0 1 1" width="2" height="0.3" depth="1.5" color="#c0392b"></a-box>
+        <a-box position="0 1.2 0.3" width="1.8" height="1" depth="1.3" color="#c0392b"></a-box>
+        <a-box position="0 1.2 1" width="1.4" height="0.6" depth="0.1" color="#9be7ff" opacity="0.85"></a-box>
+        <a-box position="-0.8 1.2 0.3" width="0.1" height="0.6" depth="0.8" color="#9be7ff" opacity="0.85"></a-box>
+        <a-box position="0.8 1.2 0.3" width="0.1" height="0.6" depth="0.8" color="#9be7ff" opacity="0.85"></a-box>
+        <a-box position="-0.8 1 -1" width="0.2" height="0.7" depth="1.5" color="#c0392b"></a-box>
+        <a-box position="0.8 1 -1" width="0.2" height="0.7" depth="1.5" color="#c0392b"></a-box>
+        <a-box position="0 1 -1.6" width="2" height="0.7" depth="0.2" color="#c0392b"></a-box>
+        <a-cylinder position="-1 0.4 1" rotation="0 0 90" radius="0.4" height="0.2" color="#202124"></a-cylinder>
+        <a-cylinder position="1 0.4 1" rotation="0 0 90" radius="0.4" height="0.2" color="#202124"></a-cylinder>
+        <a-cylinder position="-1 0.4 -1" rotation="0 0 90" radius="0.4" height="0.2" color="#202124"></a-cylinder>
+        <a-cylinder position="1 0.4 -1" rotation="0 0 90" radius="0.4" height="0.2" color="#202124"></a-cylinder>
       </a-entity>
-      <a-entity class="room" position="0 6 0">
-            <a-entity class="wall">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" rotation="0 90 0" position="3 0 -3">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" position="0 0 -6">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
+
+      <!-- HOUSE 1: Modern Yellow Two-Story House -->
+      <a-entity position="-18 0 -22">
+        <!-- Driveway -->
+        <a-box position="6 0.05 9" width="5" height="0.1" depth="8" color="#888888"></a-box>
+        <!-- Main Structure -->
+        <a-box position="0 4 0" width="12" height="8" depth="10" color="#f4d03f"></a-box>
+        <!-- Roof -->
+        <a-cone position="0 10 0" rotation="0 45 0" radius-bottom="10" radius-top="0" height="4" segments-radial="4" color="#5d4037"></a-cone>
+        <!-- Front Door -->
+        <a-box position="0 2 5" width="2" height="4" depth="0.2" color="#795548"></a-box>
+        <!-- Windows -->
+        <a-box position="-3 2 5" width="2" height="2" depth="0.2" color="#aed6f1"></a-box>
+        <a-box position="3 2 5" width="2" height="2" depth="0.2" color="#aed6f1"></a-box>
+        <a-box position="-3 6 5" width="2" height="2" depth="0.2" color="#aed6f1"></a-box>
+        <a-box position="3 6 5" width="2" height="2" depth="0.2" color="#aed6f1"></a-box>
       </a-entity>
-    <a-entity class="room" position="0 9 0">
-            <a-entity class="wall">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" rotation="0 90 0" position="3 0 -3">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" position="0 0 -6">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-    </a-entity>
-    <a-entity class="room" position="0 12 0">
-            <a-entity class="wall">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" rotation="0 90 0" position="3 0 -3">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" position="0 0 -6">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-    </a-entity>
-  </a-entity>
 
-  <a-entity class="house">
-            <a-entity class="wall" position="6 0 20">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" src="#door" position="0 1.5 0" ></a-box>
+      <!-- HOUSE 2: Cozy Brick Cottage -->
+      <a-entity position="6 0 -22">
+        <!-- Driveway -->
+        <a-box position="8 0.05 9" width="5" height="0.1" depth="8" color="#888888"></a-box>
+        <!-- Main Structure -->
+        <a-box position="0 3 0" width="10" height="6" depth="10" color="#b03a2e"></a-box>
+        <!-- Roof -->
+        <a-cone position="0 8 0" rotation="0 45 0" radius-bottom="8" radius-top="0" height="4" segments-radial="4" color="#2c3e50"></a-cone>
+        <!-- Chimney -->
+        <a-box position="3 8 -2" width="1" height="4" depth="1" color="#7b241c"></a-box>
+        <!-- Front Door -->
+        <a-box position="-2 2 5" width="2" height="4" depth="0.2" color="#ffffff"></a-box>
+        <!-- Window -->
+        <a-box position="2 3 5" width="3" height="2" depth="0.2" color="#aed6f1"></a-box>
+      </a-entity>
 
-            </a-entity>
-            <a-entity class="wall" rotation="0 90 0" position="3 0 23">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" rotation="0 90 0" position="9 0 23">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" position="6 0 26">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity>
-                <a-cylinder position="-3 0.75 23" radius="5" height="4"  width="5" color="#FFC65D" segments-radial="3" rotation="-90 0 0" depth="5"></a-cylinder>
-                
-            </a-entity>
+      <!-- HOUSE 3: Blue Suburban House (Across the Street) -->
+      <a-entity position="-12 0 22" rotation="0 180 0">
+        <a-box position="0 3 0" width="14" height="6" depth="10" color="#5499c7"></a-box>
+        <a-cone position="0 8 0" rotation="0 45 0" radius-bottom="11" radius-top="0" height="4" segments-radial="4" color="#34495e"></a-cone>
+        <a-box position="0 2 5" width="2" height="4" depth="0.2" color="#f8f9f9"></a-box>
+        <a-box position="-4 3 5" width="2" height="2" depth="0.2" color="#aed6f1"></a-box>
+        <a-box position="4 3 5" width="2" height="2" depth="0.2" color="#aed6f1"></a-box>
+      </a-entity>
 
-            </a-entity>
-      <a-plane position="0 0 0" rotation="-90 0 0" width="100" height="100" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
-      <a-camera position="0 1.4 5"></a-camera>
+      <!-- COMMUNITY PARK (Across the Street, East Side) -->
+      <a-entity position="16 0 22">
+        <!-- Sandbox / Playground Base -->
+        <a-box position="0 0.1 0" width="14" height="0.2" depth="12" color="#f5cba7"></a-box>
+        <!-- Swing Set Frame -->
+        <a-cylinder position="-4 2 0" radius="0.2" height="4" color="#e74c3c"></a-cylinder>
+        <a-cylinder position="0 2 0" radius="0.2" height="4" color="#e74c3c"></a-cylinder>
+        <a-box position="-2 4 0" width="5" height="0.3" depth="0.3" color="#e74c3c"></a-box>
+        <!-- Swings -->
+        <a-box position="-3 1 0" width="1" height="0.2" depth="1" color="#2c3e50"></a-box>
+        <a-box position="-1 1 0" width="1" height="0.2" depth="1" color="#2c3e50"></a-box>
+        <!-- Picnic Table -->
+        <a-box position="4 1 2" width="3" height="0.2" depth="2" color="#8d6e63"></a-box>
+        <a-box position="4 0.5 2" width="2" height="1" depth="1" color="#5d4037"></a-box>
+      </a-entity>
+
+      <!-- NEIGHBORHOOD TREES -->
+      <!-- Tree 1 -->
+      <a-entity position="-6 0 -13">
+        <a-cylinder position="0 2 0" radius="0.5" height="4" color="#6d4c41"></a-cylinder>
+        <a-sphere position="0 5 0" radius="2.5" color="#27ae60"></a-sphere>
+      </a-entity>
+      <!-- Tree 2 -->
+      <a-entity position="22 0 -13">
+        <a-cylinder position="0 2 0" radius="0.5" height="4" color="#6d4c41"></a-cylinder>
+        <a-cone position="0 6 0" radius-bottom="3" radius-top="0" height="5" color="#1e8449"></a-cone>
+      </a-entity>
+      <!-- Tree 3 -->
+      <a-entity position="4 0 13">
+        <a-cylinder position="0 2 0" radius="0.5" height="4" color="#6d4c41"></a-cylinder>
+        <a-sphere position="0 5 0" radius="2.5" color="#2ecc71"></a-sphere>
+      </a-entity>
+
+      <!-- STREETLIGHTS -->
+      <a-entity position="-15 0 -7">
+        <a-cylinder position="0 3 0" radius="0.2" height="6" color="#2c3e50"></a-cylinder>
+        <a-sphere position="0 6 0" radius="0.5" color="#fff9c4"></a-sphere>
+      </a-entity>
+      <a-entity position="15 0 7">
+        <a-cylinder position="0 3 0" radius="0.2" height="6" color="#2c3e50"></a-cylinder>
+        <a-sphere position="0 6 0" radius="0.5" color="#fff9c4"></a-sphere>
+      </a-entity>
+
+      <!-- Camera -->
+      <a-camera position="0 6 16" rotation="-15 0 0"></a-camera>
     </a-scene>
   </body>
 </html>
